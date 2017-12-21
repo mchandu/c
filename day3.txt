@@ -110,12 +110,10 @@ constant integer = 100
  ****************************************************************************************
  using ternary operator
  #include <stdio.h>
-
+ #define a 10
  void main()
 {
-   int a , b;
-
-   a = 10;
+   int  b;
    printf( "Value of b is %d\n", (a == 1) ? 20: 30 );
 
    printf( "Value of b is %d\n", (a == 10) ? 20: 30 );
