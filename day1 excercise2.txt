@@ -71,5 +71,34 @@ int main() {
 output:
 This is an alphabet
 ************************************************************************************************
-5.
-   
+5.electricity bill
+#include<stdio.h>
+#include<ctype.h>
+int main()
+{
+    int id,name[10];
+    float bill,s,t;
+    scanf("%d%s%f",&id,&name,&bill);
+    printf("Customer IDNO : %d\nCustomer Name : %s\nunit Consumed : %.2f ",id,name,bill);
+    s=0.15*bill*1.80;
+    t=0.15*bill*2;
+    if(bill<=199)
+        printf("\nAmount Charges @Rs. 1.20 per unit : %.2f",(bill*1.20));
+    else if((bill>=200)&&(bill<400))
+        printf("\nAmount Charges @Rs. 1.50 per unit : %.2f",(bill*1.50));
+    else if((bill>=400)&&(bill<600))
+        {
+            printf("\nAmount Charges @Rs. 1.80 per unit : %.2f",(bill*1.80));
+            if(s>=100)
+                printf("\nSurchage Amount : %.2f",s);
+                printf("\nNet Amount Paid By the Customer : %.2f",(s+bill*1.80));
+        }
+    else
+        {
+            printf("\nAmount Charges @Rs. 2.00 per unit : %.2f",(bill*2.00));
+            if(t>=100)
+                printf("\nSurchage Amount : %.2f",t);
+                printf("\nNet Amount Paid By the Customer : %.2f",(t+bill*2));
+        }
+}
+**********************************************************************************************************   
