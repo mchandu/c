@@ -1,0 +1,126 @@
+***************************
+call by value
+#include <stdio.h>
+int sum(int a, int b)
+{
+     int c=a+b;
+     return c;
+}
+
+int main()
+{
+    int var1 =1;
+    int var2 = 3;
+    int var3 = sum(var1, var2);
+    printf("%d", var3);
+
+    return 0;
+}
+output:
+4
+
+***************************************************************************
+call by reference
+#include <stdio.h>
+int sum(int *a, int *b)
+{
+     int c= *a + *b;
+     return c;
+}
+
+int main()
+{
+    int var1 =10;
+    int var2 = 3;
+    int var3 = sum(&var1, &var2);
+    printf("%d", var3);
+
+    return 0;
+}
+output:
+13
+******************************************************************
+include <stdio.h>
+void abc();
+void bbc();
+void main()
+{
+    printf("Main executed\n");
+    abc();
+}
+void abc()
+{
+    printf("ABC executed\n");
+    bbc();
+}
+void bbc()
+{
+    printf("BBC executed");
+}
+output:
+Main executed
+ABC executed
+BBC executed
+******************************************************************************
+global variable
+#include <stdio.h>
+int a=10,b=3;
+int main()
+{
+    printf("global variables are a = %d and b = %d",a,b);
+
+  
+}
+output:
+global variables are a = 10 and b = 3
+*****************************************************************************
+constant variable
+#include <stdio.h>
+
+int main()
+{
+    const int a=11;
+    const float num = 2.4;
+    const char letter = 'a';
+    printf("constant integer = %d\n constant number = %.2f\n constant letter = %c",a,num,letter);
+  
+}
+output:
+constant integer = 11
+ constant number = 2.40
+ constant letter = a
+******************************************************************************
+using #define
+#include <stdio.h>
+#define a 100
+#define num 2.3
+#define letter 'c'
+
+
+void main()
+{
+    
+    printf("constant integer = %d\n constant number = %.2f\n constant letter = %c",a,num,letter);
+  
+}
+output:
+constant integer = 100
+ constant number = 2.30
+ constant letter = c
+ ****************************************************************************************
+ using ternary operator
+ #include <stdio.h>
+
+ void main()
+{
+   int a , b;
+
+   a = 10;
+   printf( "Value of b is %d\n", (a == 1) ? 20: 30 );
+
+   printf( "Value of b is %d\n", (a == 10) ? 20: 30 );
+}
+output:
+Value of b is 30
+Value of b is 20
+
