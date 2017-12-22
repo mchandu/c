@@ -121,4 +121,23 @@ constant integer = 100
 output:
 Value of b is 30
 Value of b is 20
+******************************************************************************************
+#include<stdio.h>
 
+void test();    
+ 
+int main()
+{
+    test();
+    test();
+    
+}
+
+void test()
+{
+    static int a = 0;       
+    a = ++a;
+    printf("%d\t",a);
+}
+output:
+1 2 
